@@ -28,10 +28,10 @@ def noteprocess(request, basic,):
         if noteform.is_valid():
             mytext = noteform.cleaned_data['text']
             url = request.get_full_path()
-            shStr = get_hash_key(url)
+            shstr = get_hash_key(url)
             t1=Notepad.objects.get(basicStr=basic)
             t1.text = mytext
-            t1.shareStr = shStr
+            t1.shareStr = shstr
             p = t1.shareStr 
             t1.save()
             host = request.get_host()
