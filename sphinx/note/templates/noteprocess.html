@@ -20,7 +20,7 @@
 {% endblock %}
 
 {% block main %}
-    <form method="POST" action="#">
+    <form  method="POST" action="">
         <!--  <textarea name="content" style="width:100%; height:300px;">   </textarea>     <br /> -->
         {{ noteform.text }}  {% csrf_token %}  <br />
         <button type="submit" class="btn btn-success">Submit</button>  <br />
